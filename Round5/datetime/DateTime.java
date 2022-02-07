@@ -11,7 +11,7 @@ public class DateTime extends Date{
         int illegal = 0;
 
         if(second < 1 | 60 < second){illegal = 1;}
-        if(minute < 1 | 60 < minute){illegal = 1;}
+        if(minute < 1 | 59 < minute){illegal = 1;}
         if(hour < 1 | 24 < hour){illegal = 1;}
 
         if(illegal == 1){
@@ -42,7 +42,8 @@ public class DateTime extends Date{
         return seconds;
     }
     public String toString(){
-        this.toString();
-        return sTime;
+        String date = super.toString();
+        String timeDate = date + " " + sTime;
+        return timeDate;
     }
 }
