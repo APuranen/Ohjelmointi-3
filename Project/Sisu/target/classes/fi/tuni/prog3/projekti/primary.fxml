@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.net.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" styleClass="gridpane"
+   xmlns:fx="http://javafx.com/fxml/" fx:controller="fi.tuni.prog3.projekti.PrimaryController">
+   <Label 
+      fx:id="infoLabel"
+      text="Tervetuloa Sisun liitännäiseen!"
+      GridPane.columnIndex="0"
+      GridPane.rowIndex="0"
+      GridPane.columnSpan="2"
+   />
+   <Label
+      fx:id="infoLabel2"
+      text="Syötä tietosi niin etsimme ne, tai luo uusi profiili."
+      GridPane.columnIndex="0"
+      GridPane.rowIndex="1"
+      GridPane.columnSpan="2"
+   />
+   <Label
+      fx:id="nameLabel"
+      text="Nimi: "
+      GridPane.columnIndex="0"
+      GridPane.rowIndex="3"
+   />
+   <TextField
+      fx:id="nameField"
+      GridPane.columnIndex="1"
+      GridPane.rowIndex="3"
+   />
+   <Label 
+      fx:id="numLabel"
+      text="Opiskelijanumero:"
+      GridPane.columnIndex="0" 
+      GridPane.rowIndex="4"
+   />
+   <TextField 
+      fx:id="numberField" 
+      GridPane.columnIndex="1" 
+      GridPane.rowIndex="4"
+   />
+   <Label
+      fx:id="degreeLabel"
+      text="Tutkinto:"
+      GridPane.columnIndex="0"
+      GridPane.rowIndex="5"
+   />
+   <ComboBox
+      fx:id="major"
+      GridPane.columnIndex = "1"
+      GridPane.rowIndex="5"
+   />
+   <Label
+      fx:id="errorMsg"
+      GridPane.columnIndex="1"
+      GridPane.rowIndex="6"
+   />
+   <HBox spacing="10" alignment="bottom_right" GridPane.columnIndex="1" GridPane.rowIndex="6">
+      <Button styleClass="navbut"
+         fx:id="loginButton"
+         text="Kirjaudu sisään."
+         onAction="#handleLoginButton"
+      />
+      <Button styleClass="navbut"
+         fx:id="guestButton"
+         text="Kirjaudu vieraana."
+         onAction="#handleGuestButton"
+      />
+   </HBox>
+   <Text
+      fx:id="actiontarget"
+      text=""
+      GridPane.columnIndex="1"
+      GridPane.rowIndex="7"
+   />
+   <Button
+      alignment="TOP_RIGHT"
+      fx:id="langF"
+      text="Finnish"
+      GridPane.columnIndex="6"
+      GridPane.rowIndex="0"
+      onAction="#handleLanguageButtonF"
+   />
+   <Button
+      alignment="TOP_RIGHT"
+      fx:id="langE"
+      text="English"
+      GridPane.columnIndex="7"
+      GridPane.rowIndex="0"
+      onAction="#handleLanguageButtonE"
+   />
+</GridPane>

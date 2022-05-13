@@ -1,0 +1,25 @@
+/*
+ * Javadoc style sheet
+ */
+
+.gridpane{
+    -fx-background-color: rgb(57, 179, 219);
+    -fx-font-family: sans-serif;
+}
+.scrollpane{
+    -fx-border-color: black;
+    -fx-border-radius: 5;
+    -fx-background-insets: 1;
+    -fx-padding: 10;
+    -fx-font-family: sans-serif;
+}
+.navbar {
+    -fx-border-radius: 5;
+    -fx-spacing: 15;
+}
+.navbut{
+    -fx-border-radius: 5;
+    -fx-background-color: gray;
+    -fx-font-family: sans-serif;
+    -fx-text-fill: azure;
+}

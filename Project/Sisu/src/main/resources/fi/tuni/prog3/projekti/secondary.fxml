@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.paint.*?>
+
+
+<GridPane hgap="10" vgap="10" styleClass="gridpane"
+    xmlns:fx="http://javafx.com/fxml/" fx:controller="fi.tuni.prog3.projekti.SecondaryController">
+
+    <HBox spacing="10" styleClass="navbar" alignment="top_left" GridPane.columnIndex="0" GridPane.rowIndex="0">
+        <Button styleClass="navbut"
+        text="Opiskelijan tiedot"
+        fx:id="informationButton"
+        onAction="#handleInformation"
+        />
+
+        <Button styleClass="navbut"
+        text="Kirjaudu ulos"
+        fx:id="logOutButton"
+        onAction="#switchToPrimary"
+        />
+        <Label
+        fx:id="spacer"
+        text="      "
+        />
+        <Button
+        alignment="TOP_RIGHT"
+        fx:id="langF2"
+        text="Finnish"
+        onAction="#handleLanguageButtonF2"
+        />
+        <Button
+        alignment="TOP_RIGHT"
+        fx:id="langE2"
+        text="English"
+        onAction="#handleLanguageButtonE2"
+        />
+            
+    </HBox>
+
+    <ScrollPane fx:id="structTree" styleClass="scrollpane" GridPane.columnIndex="0" GridPane.rowIndex="2" >
+        <content>
+            <GridPane fx:id="content" hgap="10.0" vgap="5.0">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="NEVER" minWidth="-Infinity"/>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="-Infinity" prefHeight="30.0" vgrow="NEVER"/>
+                </rowConstraints>
+            </GridPane>
+        </content>
+    </ScrollPane>
+
+    <TreeView fx:id="treeView" GridPane.columnIndex="0" GridPane.rowIndex="2"
+        layoutX="100" layoutY="100" 
+        prefHeight="600" prefWidth="700">
+    </TreeView>
+    
+</GridPane>
